@@ -15,3 +15,7 @@
 
     create_default_struct - создание структуры бд
     create_test_data - заполение тестовыми данными бд
+
+Внешний вид:
+
+![image](https://user-images.githubusercontent.com/37295991/112918894-9c225f00-910e-11eb-9b14-dab380cc7955.png)
