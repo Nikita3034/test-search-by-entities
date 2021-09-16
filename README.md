@@ -9,7 +9,7 @@
 
 Структура бд:
 
-    <img width="827" alt="Снимок экрана 2021-09-16 в 11 16 36" src="https://user-images.githubusercontent.com/37295991/133576539-5762e350-bdfd-48fe-8c66-e538f66688c9.png">
+![image](https://user-images.githubusercontent.com/37295991/133576539-5762e350-bdfd-48fe-8c66-e538f66688c9.png)
 
 Созданы две миграции:
 
