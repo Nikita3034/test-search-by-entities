@@ -4,5 +4,7 @@ namespace App\Contracts\Repositories;
 
 interface AddressRepositoryContract
 {
-    public function get($query = null): object;
+    public function list(): object;
+
+    public function listBySearch($search): object;
 }

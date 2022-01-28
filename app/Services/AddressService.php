@@ -25,7 +25,7 @@ class AddressService
     public function index(Request $request): object
     {
         // getting a collection by region
-        $view['cities'] = $this->get($request);
+        $view['cities'] = $this->list($request);
 
         return view('welcome', $view);
     }
@@ -36,14 +36,20 @@ class AddressService
      * @param Request $request
      * @return array
      */
-    private function get(Request $request): array
+    private function list(Request $request): array
     {
         try {
             if (!empty($request->search)) {
                 $request->search = $this->clearString($request->search);
+
+                return $this->addressRepository
+                    ->listBySearch($request->search)
+                    ->toArray();
             }
 
-            return $this->addressRepository->get($request->search)->toArray();
+            return $this->addressRepository
+                ->list()
+                ->toArray();
         } catch (\Exception $e) {
             return dd($e->getMessage());
             return [];
