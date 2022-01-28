@@ -10,7 +10,13 @@ class City extends Model
     use HasFactory;
 
     protected $table = 'cities';
-    protected $fillable = ['id', 'rid', 'name', 'slug'];
+
+    protected $fillable = [
+        'id',
+        'rid',
+        'name',
+        'slug'
+    ];
 
     public function district()
     {
@@ -19,10 +25,6 @@ class City extends Model
 
     public function region()
     {
-        return $this->belongsTo('App\Region', 'rid');
-    }
-
-    public function getTableName() {
-        return $this->table;
+        return $this->hasOne('App\Models\Region', 'id', 'rid');
     }
 }

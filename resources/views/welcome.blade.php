@@ -12,7 +12,7 @@
     <body class="antialiased">
         <div>
             <form id="searchForm" action="" method="get">
-                <input type="text" name="query" value="{{ Request::get('query') }}" 
+                <input type="text" name="search" value="{{ Request::get('search') }}" 
                     placeholder="Введите название города или района"
                     autocomplete="off">
                 <input type="submit" value="Искать">
@@ -28,12 +28,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($collections as $collection)
-                        <tr>
-                            <td class="column1">{{$collection->region_name}}</td>
-                            <td class="column2">{{$collection->city_name}}</td>
-                            <td class="column3">{{$collection->district_name}}</td>
-                        </tr>
+                    @foreach ($cities as $city)
+                        @foreach ($city['district'] as $district)
+                            <tr>
+                                <td class="column1">{{ $city['region']['name'] }}</td>
+                                <td class="column2">{{ $city['name'] }}</td>
+                                <td class="column3">{{ $district['name'] }}</td>
+                            </tr>
+                        @endforeach
                     @endforeach
                 </tbody>
             </table>

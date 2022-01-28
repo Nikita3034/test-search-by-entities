@@ -10,14 +10,16 @@ class District extends Model
     use HasFactory;
 
     protected $table = 'districts';
-    protected $fillable = ['id', 'cid', 'name', 'slug'];
+
+    protected $fillable = [
+        'id',
+        'cid',
+        'name',
+        'slug'
+    ];
 
     public function city()
     {
-        return $this->belongsTo('App\City', 'cid');
-    }
-
-    public function getTableName() {
-        return $this->table;
+        return $this->belongsTo('App\Models\City', 'cid');
     }
 }
