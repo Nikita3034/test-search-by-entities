@@ -4,27 +4,26 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Search by entities</title>
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans">
         <link href="/assets/css/app.css" rel="stylesheet">
     </head>
     <body class="antialiased">
         <div>
             <form id="searchForm" action="" method="get">
                 <input type="text" name="search" value="{{ Request::get('search') }}" 
-                    placeholder="Введите название города или района"
+                    placeholder="Enter name of city or region"
                     autocomplete="off">
-                <input type="submit" value="Искать">
+                <input type="submit" value="Search">
             </form>
         </div>
         <div class="table_block">
             <table>
                 <thead>
                     <tr>
-                        <th class="column1">Регион</th>
-                        <th class="column2">Город</th>
-                        <th class="column3">Район</th>
+                        <th class="column1">Region</th>
+                        <th class="column2">City</th>
+                        <th class="column3">District</th>
                     </tr>
                 </thead>
                 <tbody>

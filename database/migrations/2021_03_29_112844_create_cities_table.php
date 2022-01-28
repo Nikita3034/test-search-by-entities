@@ -14,10 +14,10 @@ class CreateCitiesTable extends Migration
     public function up()
     {
         Schema::create('cities', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('rid')->unsigned();
-            $table->string('name', 255);
-            $table->string('slug', 255);
+            $table->id();
+            $table->integer('rid')->unsigned()->comment('Region identifier');
+            $table->string('name')->comment('City name');
+            $table->string('slug')->comment('City name by translit');
 
             $table->foreign('rid')
                 ->references('id')

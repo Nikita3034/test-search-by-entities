@@ -14,10 +14,10 @@ class CreateDistrictsTable extends Migration
     public function up()
     {
         Schema::create('districts', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('cid')->unsigned();
-            $table->string('name', 255);
-            $table->string('slug', 255);
+            $table->id();
+            $table->integer('cid')->unsigned()->comment('City identifier');
+            $table->string('name')->comment('City name');
+            $table->string('slug')->comment('City name by translit');
 
             $table->foreign('cid')
                 ->references('id')
