@@ -26,11 +26,11 @@
 - Go to the root of this project
 - `cp .env.example .env`
 - Set base settings
+- `composer install`
 - `php artisan key:generate`
 - `php artisan migrate`
 - `php artisan db:seed`
 - `php artisan storage:link`
-- `composer install`
 - `npm i`
 - `npm run dev`
 
