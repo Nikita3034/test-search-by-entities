@@ -33,3 +33,7 @@
 - `composer install`
 - `npm i`
 - `npm run dev`
+
+## Used technologies:
+
+    mysql, php (Laravel), css, html
