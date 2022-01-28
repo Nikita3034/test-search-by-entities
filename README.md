@@ -17,7 +17,7 @@
 
 ### Appearance:
 
-![image](https://user-images.githubusercontent.com/37295991/112918894-9c225f00-910e-11eb-9b14-dab380cc7955.png)
+<img width="870" alt="Screenshot 2022-01-28 at 2 15 44 PM" src="https://user-images.githubusercontent.com/37295991/151537706-1b0d98e7-4650-4443-b06b-57b9ff30b00f.png">
 
 ## Project development:
 
